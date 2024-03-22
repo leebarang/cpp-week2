@@ -2,6 +2,7 @@
 #include <string>
 
 bool end = false;
+int chance = 5;
 
 // 게임 진행
 std::string progress_game(int answer[], int guess[]) {
@@ -25,9 +26,19 @@ std::string progress_game(int answer[], int guess[]) {
         end = true;
         return "You win!";
     }
-    else {
+    else if (chance > 1) {
+        chance--;
         return "Strikes: " + std::to_string(strike) + ", Balls: " + std::to_string(ball);
     }
+    else {
+        end = true;
+        return "You lose!";
+    }
+}
+
+// 찬스 반환
+int get_chance() {
+    return chance;
 }
 
 // 게임 종료 여부 반환

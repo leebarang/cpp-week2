@@ -11,12 +11,15 @@ void make_answer() {
     
     using namespace std;
     srand((unsigned)(time(NULL)));
-    
-    for (int i=0; i<3; i++) {
-        answer[i] = rand()%10;
-    }
+    int num;
 
-    cout << "Answer is " << answer[0] << answer[1] << answer[2] << endl;
+    for (int i=0; i<3; i++) {
+        answer[i] = rand()%10; 
+        for (int j=0; j<i; j++) {
+            if (answer[i] == answer[j])
+                i--;
+        }
+    }
 }
 
 // 추측값을 반환

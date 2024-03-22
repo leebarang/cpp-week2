@@ -11,6 +11,7 @@
 
 void make_answer();
 void get_guess();
+int get_chance();
 bool is_end();
 std::string progress_game(int[], int[]);
 
@@ -23,6 +24,7 @@ int main() {
 
     make_answer();
     while (!is_end()) {
+        cout << get_chance() << " chances left." << endl;
         get_guess();
         cout << progress_game(answer, guess) << endl;
     }
