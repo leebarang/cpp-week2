@@ -3,7 +3,7 @@
 
 bool end = false;
 
-//게임 진행
+// 게임 진행
 std::string progress_game(int answer[], int guess[]) {
 
     int strike = 0;
@@ -30,6 +30,7 @@ std::string progress_game(int answer[], int guess[]) {
     }
 }
 
+// 게임 종료 여부 반환
 bool is_end() {
     return end;
 }
