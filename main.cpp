@@ -7,6 +7,7 @@
  * 같은 숫자와 같은 자리일 경우 strike
  * 같은 숫자지만 다른 자리일 경우 ball
  * @author leebarang
+ * @version 1.0.2
  */
 
 void make_answer();
